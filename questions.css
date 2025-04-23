@@ -1,0 +1,23 @@
+.faq {
+  width: 80%;
+  margin: 0 auto;
+}
+
+details {
+  background: rgb(255, 255, 255);
+  border: solid #ddd;
+  border-radius: 20px;
+  border-color: #d8a7c4;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  color: #000000;
+}
+
+details[open] {
+  background-color: rgb(255, 255, 255);
+}

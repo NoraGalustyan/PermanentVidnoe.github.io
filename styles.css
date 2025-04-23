@@ -1,0 +1,373 @@
+/* Общие стили */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+h1,
+h2,
+h3 {
+  color: #d8a7c4; /* Розовый цвет */
+  text-align: center;
+}
+
+a {
+  color: #d8a7c4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  display: inline-block;
+  background-color: #d8a7c4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #c28aa3;
+}
+
+/* Навигационная панель */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 300px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+/* Стили для бургера */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* Главный раздел */
+.hero {
+  background: url("images/hero-bg.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Раздел "Обо мне" */
+.about {
+  background-color: #fff;
+}
+
+.about .container {
+  display: flex;
+  align-items: center;
+}
+.about-content p {
+  text-indent: 7%;
+  text-align: justify;
+}
+
+.about-image {
+  flex: 1;
+  padding: 20px;
+  /* margin-left: 200px; */
+}
+
+.about-image img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.about-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Раздел "Услуги" */
+.services {
+  background-color: #f0f0f0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.service-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.service-item img {
+  width: 270px;
+  border-radius: 10%;
+}
+
+/* .service-item i {
+  font-size: 2rem;
+  color: #d8a7c4;
+} */
+
+/* Раздел "Цены" */
+.prices {
+  background-color: #fff;
+}
+
+.price-table {
+  width: 70%;
+  margin: auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.price-table th,
+.price-table td {
+  /* padding: 10px; */
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.price-table tr .service-name {
+  font-weight: bold;
+  background-color: #d8a7c4;
+  padding: 10px;
+}
+
+.price-table .service-price {
+  padding: 0px;
+}
+
+.price-table th {
+  background-color: #f0f0f0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Раздел "Отзывы" */
+/* .reviews {
+  background-color: #f0f0f0;
+}
+
+.reviews-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.review {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.review .author {
+  font-style: italic;
+  text-align: right;
+} */
+
+/* Раздел "Контакты" */
+.contact {
+  background-color: #fff;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #d8a7c4;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+/* Подвал */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  /* Навигационная панель */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin-right: 90px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  /* Анимация бургера */
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Раздел "Обо мне" */
+  /* .about .container {
+    flex-direction: column;
+  } */
+
+  .about-image,
+  .about-content {
+    padding: 10px;
+  }
+}
+
+/* Раздел "Обо мне" */
+@media (max-width: 848px) {
+  .about .container {
+    flex-direction: column;
+  }
+}
+
+/* Цена */
+@media (max-width: 500px) {
+  .price-table {
+    width: 90%;
+  }
+}
+
+/* ОТЗЫВЫ */
+
+.carousel-container {
+  width: 100%;
+  max-width: 700px; /* Максимальная ширина карусели */
+  margin: 0 auto; /* Центрирование карусели */
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto; /* Автоматическая высота для адаптивности */
+  object-fit: cover; /*  Важно для избежания искажений */
+  border-radius: 20px;
+  height: 100%;
+}
+
+.carousel-button {
+  position: unset;
+  /* top: 50%; */
+  transform: translateY(0%);
+  background-color: #d8a7c4;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  margin-top: -50px;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+  .carousel-container {
+    max-width: 100%; /* На всю ширину экрана на мобильных */
+  }
+  .carousel-button {
+    padding: 5px; /* Меньше отступы на мобильных */
+  }
+}

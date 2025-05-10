@@ -105,7 +105,40 @@ a:hover {
 }
 
 /* Раздел "Обо мне" */
+
 .about {
+  background-color: #fff;
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+}
+
+.about .container {
+  display: flex;
+  justify-content: center; /* Центрирование содержимого */
+  text-align: center; /* Центрирование текста */
+}
+
+.about-content {
+  max-width: 650px; /* Максимальная ширина текста */
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-content p {
+  text-indent: 7%; /* Убираем отступ для абзацев */
+  text-align: justify;
+}
+
+@media (max-width: 848px) {
+  .about .container {
+    flex-direction: column;
+    align-items: center; /* Центрирование содержимого по вертикали для мобильных устройств */
+  }
+}
+
+/*.about {
   background-color: #fff;
 }
 
@@ -121,7 +154,7 @@ a:hover {
 .about-image {
   flex: 1;
   padding: 20px;
-  /* margin-left: 200px; */
+   margin-left: 200px; 
 }
 
 .about-image img {
@@ -132,7 +165,7 @@ a:hover {
 .about-content {
   flex: 1;
   padding: 20px;
-}
+}*/
 
 /* Раздел "Услуги" */
 .services {
@@ -312,11 +345,11 @@ footer {
 }
 
 /* Раздел "Обо мне" */
-@media (max-width: 848px) {
+/* @media (max-width: 848px) {
   .about .container {
     flex-direction: column;
   }
-}
+} */
 
 /* Цена */
 @media (max-width: 500px) {

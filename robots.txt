@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://permanent-vidnoe.ru/sitemap.xml
+Host: https://permanent-vidnoe.ru
